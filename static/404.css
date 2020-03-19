@@ -1,0 +1,19 @@
+p {
+    font-size: 18pt;
+}
+
+a{
+    font-size: 12pt;
+    margin-bottom: 20px;
+    border: 2px solid rgba(212, 146, 255, 0.5);
+    background: rgba(227, 186, 255, 0.5);
+    width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 2px;
+}
+
+img{
+    border: 2px solid rgba(124, 126, 248, 0.87);
+    margin: 20px;
+}

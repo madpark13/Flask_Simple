@@ -1,0 +1,89 @@
+/* * {
+    border:1px solid black;
+} */
+
+body {
+    height: initial;
+}
+
+p{
+    text-align: center;
+    font-size: 150%;
+}
+
+p.class{
+    font-weight: bold;
+}
+
+div.card{
+    height: 350px;
+    width: 230px; 
+    margin: 70px;
+    display: inline-block;
+    border:2px solid rgb(133, 17, 156);
+    text-align: center;
+    background-color: rgb(216, 191, 216, 0.9);
+    font-size: 8pt;
+
+}
+
+
+div.card-img{
+    height:100px;
+    width: 150px;
+    background:url(https://zooclub.ru/attach/2212.jpg);
+    background-size: cover;
+    background-position: center;
+    margin:5px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.content_in_card p{
+    line-height: 20px;
+}
+
+h2.card-heading{
+    margin-top: 0;
+}
+
+
+a.logout{
+    font-size: 16pt;
+    margin-bottom: 20px;
+    border: 2px solid rgba(212, 146, 255, 0.5);
+    background: rgba(227, 186, 255, 0.829);
+    width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 2px;
+    margin-top: 30px;
+}
+
+a.change{
+    margin: 5px;
+    font-size: 12pt;
+}
+
+a.remove{
+    font-size: 12pt;
+    margin: 5px;
+}
+
+form{
+    display: none;
+    position: absolute;
+    top: 30vh;
+    left:40vw;
+}
+
+a#form-toggler{
+    position: fixed;
+    bottom:30px;
+    right:30px;
+    padding: 30px;
+    background: rgba(255, 105, 180, 0.8);
+    font-size: 14pt;
+    border-radius: 2px;
+    border: solid rgba(212, 146, 255, 0.5);
+}

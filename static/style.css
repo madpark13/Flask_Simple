@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Serif|Press+Start+2P&display=swap&subset=cyrillic');
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100wh;
+    font-family: 'PT Serif', serif;
+    margin: 0;
+    background: url(https://media.istockphoto.com/vectors/gentle-floral-seamless-background-vector-id450245521);
+    /* background-size: cover; */
+    background-attachment: fixed;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+}
+form {
+    border: 2px solid black;
+    width: 20%;
+    margin: 10px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(216, 191, 216, 0.9);
+    border-radius: 10px;
+    box-shadow: 2px cornflowerblue;
+}
+
+form *{
+    display: block;
+}
+
+input{
+    width: 100%;
+    line-height: 25px;
+    border-radius: 3px;
+    outline: none;
+    background-color: rgba(233, 217, 233, 0.904) ;
+    border: 0;
+    text-align: center;
+}
+
+input[type='submit']{
+    width: 60%;
+    margin: 10px auto;
+    font-size: small;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+input[type='submit']:hover{
+    filter: drop-shadow(1px 2px rgb(156, 156, 199));
+    transition: filter 2s;
+    transform: scale(0.9);
+    transition: tramsform 2s;
+}
+
+a{
+    text-align: center;
+    color: Indigo;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+label{
+    margin-bottom: 10px;
+}
+
+p.sorry{
+    font-size:14pt;
+    text-align: center;
+    font-weight: bold;
+    background-color: rgba(233, 217, 233, 0.6);
+    width: 500px;
+    margin: 10px auto;
+}
+
+::-webkit-input-placeholder {
+    color:rgb(216, 191, 216, 0.9) ;
+}

@@ -1,0 +1,22 @@
+<head>
+    <title>Violets</title>
+    <link a href={{ url_for('static', filename='style.css') }}
+    rel = 'stylesheet'>
+    <link a href={{ url_for('static', filename='login.css') }}
+    rel = 'stylesheet'>
+</head>
+<h1>TODO APP</h1>
+{% if error%}
+<p class='sorry'>Sorry, this account doesn't exist. Try again or go to <a href='./'>Sign Up</a> page.</p>
+{% endif %}
+<form method="POST">
+    <label>Email</label>
+    <input type="email" maxlength="30" name="email" required>
+    <br>
+    <label>Password</label>
+    <input type="password" maxlength="20" minlength="6" name="password" required>
+    <br>
+    <input type="checkbox" name="remember"> 
+    <label id ='remember'>Remeber Me</label>
+    <input type="submit" value="Log in">
+</form>

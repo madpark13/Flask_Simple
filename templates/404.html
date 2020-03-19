@@ -1,0 +1,17 @@
+<head>
+    <title>Violets</title>
+    <link  href={{ url_for('static', filename='style.css') }}
+    rel = 'stylesheet'>
+    <link  href={{ url_for('static', filename='404.css') }}
+    rel = 'stylesheet'>
+</head>
+
+<body>
+<div align=center>
+<h1>404</h1>
+<p>I'm sorry, the page hasn't been found, but we've got something better.</p>
+<img src="https://pbs.twimg.com/profile_images/1128176463851790336/ULk0gbdZ_400x400.jpg" height=400px>
+<br>
+<a href={{ url_for('index') }}>Will return to the main</a>
+</div>
+</body>

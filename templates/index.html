@@ -1,0 +1,29 @@
+<head>
+    <title>Violets</title>
+    <link a href={{ url_for('static', filename='style.css') }}
+    rel = 'stylesheet'>
+</head>
+<h1>TODO APP</h1>
+
+{% if error=='passwords_dont_match' %}
+<p class='sorry'>Sorry, seems like password you entered don`t match.</p>
+<!-- <p>(入力したパスワードが一致しないようです。再試行。)</p> -->
+{% elif error=='account_already_exists'%}
+<p class='sorry'>Sorry, seems like this account alredy exists. Try again.</p>
+{% endif %}
+<form method="POST">
+    <label>Name</label>
+    <input maxlength="20" minlength="4"  name="name" required placeholder="Inna">
+    <br>
+    <label>Email</label>
+    <input type="email" maxlength="30" name="email" required placeholder="Banana@gmail.com">
+    <br>
+    <label>Password</label>
+    <input type="password" maxlength="20" minlength="6" name="password" required placeholder="6+ ">
+    <br>
+    <label>Password</label>
+    <input type = "password" maxlength="20" minlength="6"  name="password_check" required placeholder="repeat password">
+    <br>
+    <input type="submit" value="Send!">
+    <a href='/login'>alredy have account</a>
+</form>

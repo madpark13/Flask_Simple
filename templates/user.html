@@ -1,0 +1,62 @@
+<head>
+    <title>Violets</title>
+    <link  href={{ url_for('static', filename='style.css') }}
+    rel = 'stylesheet'>
+    <link  href={{ url_for('static', filename='user.css') }}
+    rel = 'stylesheet'>
+</head>
+
+<body>
+
+{% if name != session['account'] %}
+<p><b>Something went wrong, please go to 
+    <a class='change' href={{ url_for('login') }}>Log In </a> / 
+    <a class='change' href={{ url_for('index') }}>Sign Up</a>
+</b></p>
+
+{% else %}
+
+    <h1>TODO APP</h1>
+    <p class="name">Hello, {{ name|title }}!</p>
+    <p class="name">What did you eat for breakfast?</p>
+
+    <div class='wrapper'>
+    {% for task in tasks %}
+    <div class='card' id ={{ loop.index|string }}>
+        <div class='card-img'></div>
+        <div class='content_in_card'>
+        <h2 class='card-heading'>{{ task.title }}</h2>
+        <p class='card-details'>{{task.details}}</p>
+        <p class='card-start-date'>Created: {{task.created_on}}</p>
+        <p class='card-status'>Status: {{task.status}}</p>
+        {% if task.deadline %}
+        <p class='card-end-date'>Deadline: {{task.deadline}}</p>
+        {% endif %}
+        </div>
+        <div class='card-ui'>
+            <a class='change' href={{ "/status/" + loop.index|string }}>Change Status</a>
+            <a class = 'remove' href="#" onclick=remove_task(event)>Remove</a> 
+        </div>
+    </div>
+    {% endfor %}
+    </div>
+    <form method="POST">
+        <label>Title</label>
+        <input maxlength="15" minlength="3"  name="title" required placeholder="from 3 to 15 sumbols">
+        <br>
+        <label>Details</label>
+        <input name="details"  placeholder="details">
+        <br>
+        <label>Deadline</label>
+        <input type="date"  name="deadline"  placeholder="optional">
+        <br>
+        <input type="submit" value="Add task">
+    </form>
+
+    <a id = 'form-toggler'>Show</a>
+
+    <a class='logout' href={{ url_for('logout') }}> Log Out </a>
+
+    <script src={{url_for('static', filename='script.js')}}></script>
+{% endif %}
+</body>
